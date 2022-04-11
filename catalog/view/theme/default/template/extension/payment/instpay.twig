@@ -1,0 +1,25 @@
+<div class="buttons">
+    <div class="pull-right">
+        <input type="button" value="{{ button_confirm }}" id="button-confirm" class="btn btn-primary" />
+    </div>
+</div>
+<script type="text/javascript"><!--
+    $('#button-confirm').bind('click', function() {
+        $.ajax({
+            url: 'index.php?route=extension/payment/instpay/confirm',
+            dataType: 'json',
+            success: function(obj){
+                console.log(JSON.stringify(obj));
+                if (obj['code'] === 0) {
+                    console.log(obj['result']['redirect_url']);
+                    console.log("success");
+                    // location = obj['result']['redirect_url'];
+                    window.open(obj['result']['redirect_url'])
+                }
+            },
+            error:function(){
+                alert("instpay confirm error");
+            }
+        });
+    });
+//--></script>
