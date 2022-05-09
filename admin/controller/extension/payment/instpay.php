@@ -20,12 +20,12 @@ class ControllerExtensionPaymentInstpay extends Controller {
         }
 
         if (isset($this->error['warning'])) {
-			$data['error_warning'] = $this->error['warning'];
-		} else {
-			$data['error_warning'] = '';
-		}
+            $data['error_warning'] = $this->error['warning'];
+        } else {
+            $data['error_warning'] = '';
+        }
 
-		if (isset($this->error['host'])) {
+        if (isset($this->error['host'])) {
             $data['error_host'] = $this->error['host'];
         } else {
             $data['error_host'] = '';
@@ -49,7 +49,7 @@ class ControllerExtensionPaymentInstpay extends Controller {
             $data['error_api_passphrase'] = '';
         }
 
-		$data['breadcrumbs'] = array();
+        $data['breadcrumbs'] = array();
         $data['breadcrumbs'][] = array(
             'text' => $this->language->get('text_home'),
             'href' => $this->url->link('common/dashboard', 'user_token=' . $this->session->data['user_token'], true)
@@ -92,6 +92,12 @@ class ControllerExtensionPaymentInstpay extends Controller {
             $data['payment_inst_api_passphrase'] = $this->config->get('payment_inst_api_passphrase');
         }
 
+        if (isset($this->request->post['payment_instpay_webhooks_status'])) {
+            $data['payment_instpay_webhooks_status'] = $this->request->post['payment_instpay_webhooks_status'];
+        } else {
+            $data['payment_instpay_webhooks_status'] = $this->config->get('payment_instpay_webhooks_status');
+        }
+
         if (isset($this->request->post['payment_instpay_geo_zone_id'])) {
             $data['payment_instpay_geo_zone_id'] = $this->request->post['payment_instpay_geo_zone_id'];
         } else {
@@ -115,8 +121,8 @@ class ControllerExtensionPaymentInstpay extends Controller {
         }
 
         $data['header'] = $this->load->controller('common/header');
-		$data['column_left'] = $this->load->controller('common/column_left');
-		$data['footer'] = $this->load->controller('common/footer');
+        $data['column_left'] = $this->load->controller('common/column_left');
+        $data['footer'] = $this->load->controller('common/footer');
 
         $this->response->setOutput($this->load->view('extension/payment/instpay', $data));
     }

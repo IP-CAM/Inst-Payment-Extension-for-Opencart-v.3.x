@@ -9,10 +9,10 @@
             url: 'index.php?route=extension/payment/instpay/confirm',
             dataType: 'json',
             success: function(obj){
-                console.log(JSON.stringify(obj));
+                // console.log(JSON.stringify(obj));
                 if (obj['code'] === 0) {
-                    console.log(obj['result']['redirect_url']);
-                    console.log("success");
+                    // console.log(obj['result']['redirect_url']);
+                    // console.log("success");
                     // location = obj['result']['redirect_url'];
                     window.open(obj['result']['redirect_url'])
                 }

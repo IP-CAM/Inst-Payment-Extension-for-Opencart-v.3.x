@@ -11,16 +11,17 @@ $_['text_instpay']          = '<a target="_BLANK" href="https://www.inst.money/"
 
 
 // Entry
-$_['entry_host']            = 'Host:';
+$_['entry_host']            = 'API Address:';
 $_['entry_api_key']         = 'API Key:';
 $_['entry_api_secret']      = 'API Secret:';
 $_['entry_api_passphrase']  = 'API Passphrase:';
+$_['entry_webhooks_status'] = '订单状态推送:';
 $_['entry_geo_zone']        = '区域:';
 $_['entry_sort_order']      = '排序:';
 $_['entry_status']          = '状态:';
 
 // Error
-$_['error_host']            = '请输入 Host!';
+$_['error_host']            = '请输入 API 地址!';
 $_['error_api_key']         = '请输入 API Key!';
 $_['error_api_secret']      = '请输入 API Secret!';
 $_['error_api_passphrase']  = '请输入 API Passphrase!';

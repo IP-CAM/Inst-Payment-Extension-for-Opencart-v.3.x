@@ -11,16 +11,17 @@ $_['text_instpay']          = '<a target="_BLANK" href="https://www.inst.money/"
 
 
 // Entry
-$_['entry_host']            = 'Host:';
+$_['entry_host']            = 'API Address:';
 $_['entry_api_key']         = 'API Key:';
 $_['entry_api_secret']      = 'API Secret:';
 $_['entry_api_passphrase']  = 'API Passphrase:';
+$_['entry_webhooks_status'] = 'Webhooks of order status:';
 $_['entry_geo_zone']        = 'Geo Zone:';
 $_['entry_sort_order']      = 'Sort Order:';
 $_['entry_status']          = 'Status:';
 
 // Error
-$_['error_host']            = 'Please Input Host!';
+$_['error_host']            = 'Please Input API Address!';
 $_['error_api_key']         = 'Please Input API Key!';
 $_['error_api_secret']      = 'Please Input API Secret!';
 $_['error_api_passphrase']  = 'Please Input API Passphrase!';
