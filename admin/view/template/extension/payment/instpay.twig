@@ -31,7 +31,7 @@
                         <div class="form-group required">
                             <label class="col-sm-2 control-label" for="input-host">{{ entry_host }}</label>
                             <div class="col-sm-10">
-                                <input type="text" name="payment_inst_host" value="{{ payment_inst_host }}" placeholder="{{ entry_host }}" id="input-host" class="form-control"/>
+                                <input type="text" name="payment_inst_host" value="{{ payment_inst_host }}" placeholder="{{ 'https://api.firstchampion.io' }}" id="input-host" class="form-control"/>
                                 {% if error_host %}
                                     <div class="text-danger">{{ error_host }}</div>
                                 {% endif %}
@@ -69,10 +69,10 @@
                             <div class="col-sm-10">
                                 <select name="payment_instpay_webhooks_status" id="input-webhooks_status" class="form-control">
                                     {% if payment_instpay_webhooks_status %}
-                                        <option value="1" selected="selected">{{ text_enabled }}</option>
+                                        <option value="1" selected="selected">{{ text_enabled_webhooks }}</option>
                                         <option value="0">{{ text_disabled }}</option>
                                     {% else %}
-                                        <option value="1">{{ text_enabled }}</option>
+                                        <option value="1">{{ text_enabled_webhooks }}</option>
                                         <option value="0" selected="selected">{{ text_disabled }}</option>
                                     {% endif %}
                                 </select>

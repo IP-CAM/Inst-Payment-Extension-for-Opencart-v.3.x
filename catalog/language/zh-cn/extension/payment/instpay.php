@@ -1,6 +1,6 @@
 <?php
 
 // Text
-$_['text_title'] = 'Inst';
+$_['text_title'] = 'Credit/Debit Card';
 
 ?>
