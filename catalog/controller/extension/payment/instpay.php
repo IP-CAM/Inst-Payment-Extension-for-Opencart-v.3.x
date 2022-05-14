@@ -189,7 +189,8 @@ class ControllerExtensionPaymentInstpay extends Controller {
             $dataArray = json_decode($tmpData, true);
 
             if (strcmp($dataArray['action'], 'order_result') == 0) {
-                foreach ($dataArray['events'] as $value) {
+                foreach ($dataArray['events'] as $val) {
+                    $value = json_decode($val, true);
                     $order_id = substr($value['params']['cust_order_id'], 42);
                     $this->load->model('checkout/order');
                     $order_info = $this->model_checkout_order->getOrder($order_id);
